@@ -17,6 +17,9 @@
 {%- block javascript %}
 {{ super() }}
 {{ webpack['invenio-communities-header.js'] }}
+{% if config.get('BOOKMARKS_ENABLED', False) %}
+  {{ optional_webpack_tag('invenio-rdm-dashboard-community-star.js') }}
+{% endif %}
 {%- if active_community_header_menu_item == 'requests' and show_orcha_waitlist_banner(community_ui) %}
 {{ webpack['zenodo-rdm-orcha-waitlist-banner.js'] }}
 {%- endif %}

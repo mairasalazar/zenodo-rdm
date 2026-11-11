@@ -8,6 +8,7 @@ license = "GPL-3.0-or-later"
 requires-python = "~=3.14.0"
 dependencies = [
     "invenio-app-rdm[opensearch2,profiler]==15.0.0b6.dev0",
+    "invenio-rdm-dashboard",
     "zenodo-legacy",
     "zenodo-rdm",
     "github3.py>=3.0.0",
@@ -20,6 +21,7 @@ dependencies = [
     "invenio-records-resources",
     "invenio-github>=7.0.0,<8.0.0",
     "invenio-rdm-records",
+    "invenio-communities",
 ]
 
 [tool.uv.sources]
